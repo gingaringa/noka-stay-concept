@@ -42,6 +42,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .invert .prov { color: #8A8474; border-color: var(--rule-ink); }
 .band__over .prov { color: rgba(244,240,232,.7); border-color: rgba(244,240,232,.3); }
 .provline { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.provline--head { margin-top: clamp(16px, 1.8vw, 22px); }
+.prov--wide { letter-spacing: .14em; }
 
 /* 01 — typography -------------------------------------------------------- */
 .d1, .d2, .d3 { font-family: var(--ff-display); font-weight: 400; color: var(--ink); }
@@ -763,6 +765,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .map__side { grid-column: 8 / 13; }
   .shead__ti { grid-column: 3 / 11; }
   .shead__ai { display: none; }
+  /* ただし仮表示タグだけは消してはいけない（見出し側に複製している） */
   .idx__row { grid-template-columns: 40px 116px 1fr 96px; }
   .idx__pl { display: none; }
   .idx__peek { right: 78px; width: 140px; }
