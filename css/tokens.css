@@ -1,0 +1,65 @@
+/* ==========================================================================
+   NOKA stay — Design Tokens
+   色は「日本の日常」から抽出している。観光の色（桜・朱・抹茶）は一切使わない。
+   ========================================================================== */
+
+:root {
+  /* --- 面 / Surfaces ------------------------------------------------------
+     紙・障子・朝の壁。わずかに黄みを含む白。純白は使わない（画面が硬くなる） */
+  --paper:        #F4F0E8;   /* 主背景：ざら紙 */
+  --paper-2:      #EAE4D8;   /* 版面の沈み：封筒・段ボール */
+  --paper-3:      #DED7C7;   /* 図版の地 */
+
+  /* --- 墨 / Ink -----------------------------------------------------------
+     真っ黒にしない。夜の東京は黒ではなく、わずかに温かい灰色 */
+  --ink:          #1A1813;   /* 見出し・反転セクションの地 */
+  --ink-2:        #3B372E;   /* 本文 */
+  --ink-3:        #6E6A5F;   /* 副次テキスト：コンクリート・道路 */
+  --ink-4:        #9A958A;   /* 注記 */
+
+  /* --- 罫 / Rules ---------------------------------------------------------
+     地図の等高線の細さ。1px より細く見えるように色で調整する */
+  --rule:         #CFC7B5;
+  --rule-soft:    #DFD8C8;
+  --rule-ink:     #34302A;   /* 反転時の罫 */
+
+  /* --- 差し色 / Accent ----------------------------------------------------
+     柿。夕方の陽、郵便受け、消火器、鳥居ではない赤。1ページに数点だけ置く */
+  --persimmon:    #B4472B;
+  --persimmon-2:  #8E3620;
+
+  /* --- 補助色（すべて実在の生活物から） ------------------------------------ */
+  --tatami:       #8F8F63;   /* 畳の縁・青のり */
+  --line-toei:    #8A9B7B;   /* 都営新宿線のラインカラー（リーフ）を落ち着かせた値 */
+  --sky:          #A9B8BD;   /* 朝の空・電車の窓ガラス */
+  --river:        #93A7AC;   /* 新中川 */
+
+  /* --- タイポグラフィ -------------------------------------------------------
+     Newsreader   : 見出し（Editorial セリフ。イタリックを感情の行に使う）
+     Instrument Sans : UI・本文
+     IBM Plex Mono: 住所・時刻・徒歩分・座標（＝「地図と標識の語彙」）
+     すべて SIL Open Font License / Wix にアップロード可 */
+  --ff-display: "Newsreader", "Noto Serif JP", "Hiragino Mincho ProN", serif;
+  --ff-sans:    "Instrument Sans", "Noto Sans JP", -apple-system, "Hiragino Sans", sans-serif;
+  --ff-mono:    "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+  --ff-jp:      "Noto Serif JP", "Hiragino Mincho ProN", serif;
+
+  /* 和欧混植：和文は欧文より一段小さく、字間をわずかに開ける */
+  --jp-size:    0.92em;
+  --jp-track:   0.02em;
+
+  /* --- 寸法 ---------------------------------------------------------------- */
+  --page:       1440px;
+  --gutter:     clamp(20px, 4.4vw, 72px);
+  --col-gap:    clamp(16px, 2vw, 32px);
+
+  /* --- 動き ----------------------------------------------------------------
+     速くしない。静かだが確かに動く。 */
+  --ease:       cubic-bezier(.22, .61, .36, 1);
+  --ease-out:   cubic-bezier(.16, 1, .3, 1);
+  --dur:        720ms;
+  --dur-fast:   260ms;
+
+  /* --- 粒子（紙の目） ------------------------------------------------------- */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.86' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.42'/%3E%3C/svg%3E");
+}
